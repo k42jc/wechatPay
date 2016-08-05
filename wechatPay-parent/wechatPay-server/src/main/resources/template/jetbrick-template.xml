@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="viewResolver" class="jetbrick.template.web.springmvc.JetTemplateViewResolver">
+	    <property name="order" value="1" />
+	    <property name="contentType" value="text/html; charset=utf-8" />
+	    <property name="prefix" value="/WEB-INF/views/"/>
+	    <property name="suffix" value=".html" />
+	
+	    <!-- 指定配置文件 -->
+	    <property name="configLocation" value="classpath:properties/jetbrick-template.properties" />
+	
+	    <!-- 直接配置属性 -->
+	    <!-- <property name="configProperties">
+	        <props>
+	            <prop key="jetx.input.encoding">utf-8</prop>
+	            <prop key="jetx.output.encoding">utf-8</prop>
+	            <prop key="jetx.autoscan.packages">pub.lxd.tags</prop>
+	        </props>
+	    </property> -->
+	</bean>
+
+</beans>
